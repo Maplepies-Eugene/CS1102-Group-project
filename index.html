@@ -2,34 +2,1488 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xplore Skill - Sagar Developer</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;600;700&display=swap">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Website</title>
+
+  <script>
+    const questions = [
+    {
+        question: "Which is the factor of search engines use ranking algorithms to sort search results?",
+        answers: [
+            {text: "User preferences only", correct: false},
+            {text: "Ratings", correct: false},
+            {text: "User preferences and relevance", correct: true},
+            {text: "Relevance only", correct: false},
+        ]
+    },
+    {
+        question: "What is the purpose of researchers and analysts use sorting methods to organize and process large datasets?",
+        answers: [
+            {text: "Generate reports", correct: false},
+            {text: "Tracking of orders for shipment", correct: false},
+            {text: "Determine the most effective path", correct: false},
+            {text: "Perform pattern identification and statistical analysis", correct: true},
+        ] 
+    },
+    {
+        question: "Which storage device is used in external sorting?",
+        answers: [
+            {text: "RAM only", correct: false},
+            {text: "Hard Disk only", correct: false},
+            {text: "Both Hard Disk and RAM", correct: true},
+            {text: "Cache memory", correct: false},
+        ] 
+    },
+    {
+        question: "What is out-of-place sorting?",
+        answers: [
+            {text: "The sorting algorithm uses secondary memory for sorting", correct: false},
+            {text: "The sorting algorithm uses the main memory for sorting", correct: false},
+            {text: "The sorting algorithm uses no extra memory except the array for sorting", correct: false},
+            {text: "The sorting algorithm uses extra memory for sorting", correct: true},
+        ] 
+    },
+    {
+        question: "What is the purpose of using external algorithms in sorting?",
+        answers: [
+            {text: "To minimize time complexity", correct: false},
+            {text: "To manage extensive data sets that exceed the capacity of the main memory", correct: true},
+            {text: "To maintain stability during the sorting process", correct: false},
+            {text: "To reduce comparisons", correct: false},
+        ] 
+    }
+];
+
+const questionElement = document.getElementById("question");
+const answerButtons = document.getElementById("answer-buttons");
+const nextButton = document.getElementById("next-btn");
+
+let currentQuestionIndex = 0;
+let score = 0;
+
+function startQuiz(){
+    currentQuestionIndex = 0;
+    score = 0;
+    nextButton.innerHTML = "Next";
+    showQuestion();
+}
+
+function showQuestion(){
+    resetState();
+    let currentQuestion = questions[currentQuestionIndex];
+    let questionNo = currentQuestionIndex + 1;
+    questionElement.innerHTML = questionNo + ". " + currentQuestion.question;
+
+    currentQuestion.answers.forEach(answer => {
+        const button = document.createElement("button");
+        button.innerHTML = answer.text;
+        button.classList.add("btn");
+        answerButtons.appendChild(button);
+        if(answer.correct){
+            button.dataset.correct = answer.correct;
+        }
+        button.addEventListener("click", selectAnswer);
+    });
+}
+
+
+function resetState(){
+    nextButton.style.display = "none";
+    while(answerButtons.firstChild){
+        answerButtons.removeChild(answerButtons.firstChild);
+    }
+}
+
+function selectAnswer(e){
+    const selectedBtn = e.target;
+    const isCorrect = selectedBtn.dataset.correct === "true";
+    if(isCorrect){
+        selectedBtn.classList.add("correct");
+        score++;
+    }else{
+        selectedBtn.classList.add("incorrect");
+    }
+    Array.from(answerButtons.children).forEach(button => {
+        if(button.dataset.correct === "true"){
+            button.classList.add("correct");
+        }
+        button.disabled = true;
+    });
+    nextButton.style.display = "block";
+}
+
+function showScore(){
+    resetState();
+    questionElement.innerHTML = `You scored ${score} out of ${questions.length}!`;
+    nextButton.innerHTML = "Home";
+    nextButton.style.display = "block";
+}
+
+function handleNextButton(){
+    currentQuestionIndex++;
+    if(currentQuestionIndex < questions.length){
+        showQuestion();
+    }else{
+        showScore();
+    }
+}
+
+function gohome()
+{
+window.history.back();
+}
+
+nextButton.addEventListener("click", ()=>{
+    if(currentQuestionIndex < questions.length){
+        handleNextButton();
+    }else{
+        gohome()
+    }
+})
+
+
+startQuiz();
+
+</script>
+
+  <style>
+    @import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+	box-sizing: border-box;
+}
+html {
+	font-size: 10px;
+	font-family: 'Montserrat', sans-serif;
+	scroll-behavior: smooth;
+}
+a {
+	text-decoration: none;
+}
+.container {
+	min-height: 100vh;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+img {
+	height: auto;
+	max-width: 100%;
+	object-fit: cover;
+	background-position: center;
+}
+p {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+ol {
+	color: black;
+	font-size: 1.4rem;
+	margin-top: 5px;
+	line-height: 2.5rem;
+	font-weight: 300;
+	letter-spacing: 0.05rem;
+}
+.section-title {
+	font-size: 4rem;
+	font-weight: 300;
+	color: black;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.2rem;
+	text-align: center;
+}
+.section-title span {
+	color: rgb(20, 217, 220);
+}
+
+.gtq {
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: rgb(20, 217, 220);
+	border: 2px solid rgb(20, 217, 220);
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+
+.cta {
+	display: inline-block;
+	padding: 10px 30px;
+	color: white;
+	background-color: transparent;
+	border: 2px solid rgb(20, 217, 220);
+	font-size: 2rem;
+	text-transform: uppercase;
+	letter-spacing: 0.1rem;
+	margin-top: 30px;
+	transition: 0.3s ease;
+	transition-property: background-color, color;
+}
+.cta:hover {
+	color: white;
+	background-color: rgb(20, 217, 220);
+}
+.brand h1 {
+	font-size: 3rem;
+	text-transform: uppercase;
+	color: white;
+}
+.brand h1 span {
+	color: rgb(20, 217, 220);
+}
+
+/* Header section */
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease background-color;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+#header .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 100%;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+	left: 0%;
+}
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: rgb(20, 217, 220);
+}
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: 20px;
+}
+#header .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+	top: 8px;
+}
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+	bottom: 0;
+}
+#header .hamburger.active .bar::after {
+	top: 0;
+}
+/* End Header section */
+
+/* Hero Section */
+#hero {
+	background-image: url(./img/hero-bg.png);
+	background-size: cover;
+	background-position: top center;
+	position: relative;
+	z-index: 1;
+}
+#hero::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	opacity: 0.7;
+	z-index: -1;
+}
+#hero .hero {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 50px;
+	justify-content: flex-start;
+}
+#hero h1 {
+	display: block;
+	width: fit-content;
+	font-size: 4rem;
+	position: relative;
+	color: transparent;
+	animation: text_reveal 0.5s ease forwards;
+	animation-delay: 1s;
+}
+#hero h1:nth-child(1) {
+	animation-delay: 1s;
+}
+#hero h1:nth-child(2) {
+	animation-delay: 2s;
+}
+#hero h1:nth-child(3) {
+	animation: text_reveal_name 0.5s ease forwards;
+	animation-delay: 3s;
+}
+#hero h1 span {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 0;
+	background-color: rgb(20, 217, 220);
+	animation: text_reveal_box 1s ease;
+	animation-delay: 0.5s;
+}
+#hero h1:nth-child(1) span {
+	animation-delay: 0.5s;
+}
+#hero h1:nth-child(2) span {
+	animation-delay: 1.5s;
+}
+#hero h1:nth-child(3) span {
+	animation-delay: 2.5s;
+}
+
+/* End Hero Section */
+
+/* Background */
+#background .background {
+	flex-direction: column-reverse;
+	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 20px;
+}
+#background .col-left {
+	width: 250px;
+	height: 360px;
+}
+#background .col-right {
+	width: 100%;
+}
+#background .col-right h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	margin-bottom: 10px;
+}
+#background .col-right p {
+	margin-bottom: 20px;
+}
+#background .col-right .cta {
+	color: black;
+	margin-bottom: 50px;
+	padding: 10px 20px;
+	font-size: 2rem;
+}
+#background .col-left .background-img {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	border: 10px solid white;
+}
+#background .col-left .background-img::after {
+	content: '';
+	position: absolute;
+	left: -33px;
+	top: 19px;
+	height: 98%;
+	width: 98%;
+	border: 7px solid rgb(20, 217, 220);
+	z-index: -1;
+}
+/* End Background */
+
+/* application Section */
+#application .application {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#application .application-top {
+	max-width: 1200px;
+	margin: 0 auto;
+}
+#application .application-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+#application .application-item {
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-image: url(./img/img-1.png);
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+#application .application-item::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.9;
+	z-index: -1;
+}
+#application .application-bottom .icon {
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+#application .application-item h2 {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+#application .application-item p {
+	color: white;
+	text-align: left;
+}
+/* End application Section */
+
+
+/* comparison Section */
+#comparison .comparison {
+	flex-direction: column;
+	text-align: center;
+	max-width: 1500px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#comparison .comparison-top {
+	max-width: 500px;
+	margin: 0 auto;
+}
+#comparison .comparison-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+#comparison .comparison-item {
+	flex-basis: 80%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-image: url(./img/img-1.png);
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}
+#comparison .comparison-item::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.9;
+	z-index: -1;
+}
+#comparison .comparison-bottom .icon {
+	height: 80px;
+	width: 80px;
+	margin-bottom: 20px;
+}
+#comparison .comparison-item h2 {
+	font-size: 2rem;
+	color: white;
+	margin-bottom: 10px;
+	text-transform: uppercase;
+}
+#comparison .comparison-item p {
+	color: white;
+	text-align: left;
+}
+/* End comparison Section */
+
+/* Number section */
+#number .number {
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 0;
+}
+#number .number-header h1 {
+	margin-bottom: 50px;
+}
+#number .all-number {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+#number .project-item {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	width: 80%;
+	margin: 20px auto;
+	overflow: hidden;
+	border-radius: 10px;
+}
+#number .project-info {
+	padding: 30px;
+	flex-basis: 50%;
+	height: 100%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	color: white;
+}
+#number .project-info h1 {
+	font-size: 4rem;
+	font-weight: 500;
+}
+#number .project-info h2 {
+	font-size: 1.8rem;
+	font-weight: 500;
+	margin-top: 10px;
+}
+#number .project-info p {
+	color: white;
+}
+#number .project-img {
+	flex-basis: 50%;
+	max-width: 100%;
+	height: auto;
+	background-position: center;
+	overflow: hidden;
+	position: relative;
+}
+#number .project-img:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+	opacity: 0.7;
+}
+#number .project-img img {
+	transition: 0.3s ease transform;
+}
+#number .project-item:hover .project-img img {
+	transform: scale(1.1);
+}
+/* End number section */
+
+/* Efficiency Section */
+#efficiency .efficiency {
+	flex-direction: column-reverse;
+	text-align: center;
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 100px 20px;
+}
+#efficiency .col-left {
+	width: 250px;
+	height: 360px;
+}
+#efficiency .col-right {
+	width: 100%;
+}
+#efficiency .col-right h3 {
+	font-size: 24px;
+	font-weight: bold;
+	letter-spacing: 0.2rem;
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+#efficiency .col-right p {
+	margin-bottom: 10px;
+}
+#efficiency .col-right ol li {
+	margin-bottom: 7px;
+}
+#efficiency .col-right .cta {
+	color: black;
+	margin-bottom: 50px;
+	padding: 10px 20px;
+	font-size: 2rem;
+}
+#efficiency .col-left .efficiency-img {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	border: 10px solid white;
+}
+#efficiency .col-left .efficiency-img::after {
+	content: '';
+	position: absolute;
+	left: -33px;
+	top: 19px;
+	height: 98%;
+	width: 98%;
+	border: 7px solid rgb(20, 217, 220);
+	z-index: -1;
+}
+/* End Efficiency Section */
+
+/* Quiz Section */
+#quiz .quiz {
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 90%;
+}
+#quiz .quiz-items {
+	/* max-width: 400px; */
+	width: 100%;
+}
+#quiz .quiz-item {
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+
+/*End Quiz Section */
+
+/* contact Section */
+#contact .contact {
+	flex-direction: column;
+	max-width: 1200px;
+	margin: 0 auto;
+	width: 90%;
+}
+#contact .contact-items {
+	/* max-width: 400px; */
+	width: 100%;
+}
+#contact .contact-item {
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0px 0px 18px 0 #0000002c;
+	transition: 0.3s ease box-shadow;
+}
+#contact .contact-item:hover {
+	box-shadow: 0px 0px 5px 0 #0000002c;
+}
+#contact .icon {
+	width: 70px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+#contact .contact-info h1 {
+	font-size: 2.5rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+#contact .contact-info h2 {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	font-weight: 500;
+}
+/*End contact Section */
+
+/* Footer */
+#footer {
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#footer .footer {
+	min-height: 200px;
+	flex-direction: column;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+#footer h2 {
+	color: white;
+	font-weight: 500;
+	font-size: 1.8rem;
+	letter-spacing: 0.1rem;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+#footer .social-icon {
+	display: flex;
+	margin-bottom: 30px;
+}
+#footer .social-item {
+	height: 50px;
+	width: 50px;
+	margin: 0 5px;
+}
+#footer .social-item img {
+	filter: grayscale(1);
+	transition: 0.3s ease filter;
+}
+#footer .social-item:hover img {
+	filter: grayscale(0);
+}
+#footer p {
+	color: white;
+	font-size: 1.3rem;
+}
+/* End Footer */
+
+/* Keyframes */
+@keyframes hamburger_puls {
+	0% {
+		opacity: 1;
+		transform: scale(1);
+	}
+	100% {
+		opacity: 0;
+		transform: scale(1.4);
+	}
+}
+@keyframes text_reveal_box {
+	50% {
+		width: 100%;
+		left: 0;
+	}
+	100% {
+		width: 0;
+		left: 100%;
+	}
+}
+@keyframes text_reveal {
+	100% {
+		color: white;
+	}
+}
+@keyframes text_reveal_name {
+	100% {
+		color: rgb(20, 217, 220);
+		font-weight: 500;
+	}
+}
+/* End Keyframes */
+
+/* Media Query For Tablet */
+@media only screen and (min-width: 768px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 6rem;
+	}
+
+	.gtq {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+
+	/* Hero */
+	#hero h1 {
+		font-size: 7rem;
+	}
+	/* End Hero */
+
+	/* Backgroud */
+	#background .background {
+		flex-direction: row;
+	}
+	#background .col-left {
+		width: 600px;
+		height: 400px;
+		padding-left: 60px;
+	}
+	#background .background .col-left .background-img::after {
+		left: -45px;
+		top: 34px;
+		height: 98%;
+		width: 98%;
+		border: 10px solid rgb(20, 217, 220);
+	}
+	#background .col-right {
+		text-align: left;
+		padding: 30px;
+	}
+	#background .col-right h1 {
+		text-align: left;
+	}
+	/* End Background */
+
+	/* application Section */
+	#application .application-bottom .application-item {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+	/* End application Section */
+
+	/* comparison Section */
+	#comparison .comparison-bottom .comparison-item {
+		flex-basis: 45%;
+		margin: 2.5%;
+	}
+	/* End comparison Section */
+
+	/* Project */
+	#number .project-item {
+		flex-direction: row;
+	}
+	#number .project-item:nth-child(even) {
+		flex-direction: row-reverse;
+	}
+	#number .project-item {
+		height: 400px;
+		margin: 0;
+		width: 100%;
+		border-radius: 0;
+	}
+	#number .all-number .project-info {
+		height: 100%;
+	}
+	#number .all-number .project-img {
+		height: 100%;
+	}
+	/* End Project */
+
+	/* Efficiency */
+	#efficiency .efficiency {
+		flex-direction: row;
+	}
+	#efficiency .col-left {
+		width: 600px;
+		height: 400px;
+		padding-left: 60px;
+	}
+	#efficiency .efficiency .col-left .efficiency-img::after {
+		left: -45px;
+		top: 34px;
+		height: 98%;
+		width: 98%;
+		border: 10px solid rgb(20, 217, 220);
+	}
+	#efficiency .col-right {
+		text-align: left;
+		padding: 30px;
+	}
+	#efficiency .col-right h1 {
+		text-align: left;
+	}
+	/* End Efficiency */
+
+	/* Quiz  */
+	#quiz .quiz {
+		flex-direction: column;
+		padding: 100px 0;
+		align-items: center;
+		justify-content: center;
+		min-width: 20vh;
+	}
+	#quiz .quiz-items {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin: 0;
+	}
+	#quiz .quiz-item {
+		width: 30%;
+		margin: 0;
+		flex-direction: row;
+	}
+	/* End Quiz  */
+
+	/* contact  */
+	#contact .contact {
+		flex-direction: column;
+		padding: 100px 0;
+		align-items: center;
+		justify-content: center;
+		min-width: 20vh;
+	}
+	#contact .contact-items {
+		width: 100%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-evenly;
+		margin: 0;
+	}
+	#contact .contact-item {
+		width: 30%;
+		margin: 0;
+		flex-direction: row;
+	}
+	#contact .contact-item .icon {
+		height: 100px;
+		width: 100px;
+	}
+	#contact .contact-item .icon img {
+		object-fit: contain;
+	}
+	#contact .contact-item .contact-info {
+		width: 100%;
+		text-align: left;
+		padding-left: 20px;
+	}
+	/* End contact  */
+}
+/* End Media Query For Tablet */
+
+/* Media Query For Desktop */
+@media only screen and (min-width: 1200px) {
+	/* header */
+	#header .hamburger {
+		display: none;
+	}
+	#header .nav-list ul {
+		position: initial;
+		display: block;
+		height: auto;
+		width: fit-content;
+		background-color: transparent;
+	}
+	#header .nav-list ul li {
+		display: inline-block;
+	}
+	#header .nav-list ul li a {
+		font-size: 1.8rem;
+	}
+	#header .nav-list ul a:after {
+		display: none;
+	}
+	/* End header */
+
+	#comparison .comparison-bottom .comparison-item {
+		flex-basis: 22%;
+		margin: 1.5%;
+	}
+	
+	#application .application-bottom .application-item {
+		flex-basis: 22%;
+		margin: 1.5%;
+	}
+}
+/* End  Media Query For Desktop */
+
+/* Quiz*/
+
+.app{
+    background: linear-gradient(60deg, #29323c 0%, #485563 100%);
+    width: 90%;
+    max-width: 600px;
+    margin: 100px auto 0;
+    border-radius: 10px;
+    padding: 30px;
+}
+.app h1{
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+    border-bottom: 1px solid white;
+    padding-bottom: 30px;
+}
+.quiz{
+    padding: 20px 0;
+}
+.quiz h2{
+    font-size:  18px;
+    color: white;
+    font-weight: 600;
+}
+.btn{
+    background: #fff;
+    color: #222;
+    font-weight: 500;
+    width: 100%;
+    border: 1px solid #222;
+    padding: 10px;
+    margin: 10px 0;
+    text-align: left;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.btn:hover:not([disabled]){
+    background: #222;
+    color: #fff;
+}
+.btn:disabled{
+    cursor: no-drop;
+}
+#next-btn{
+    background: rgb(20, 217, 220);
+    color: #fff;
+    font-weight: 500;
+    width: 150px;
+    border: 0;
+    padding: 10px;
+    margin: 20px auto 0;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+.correct{
+    background: #9aeabc;
+}
+.incorrect{
+    background: #ff9393;
+}
+/* End Quiz*/
+
+  </style>
+
+
+
+
 </head>
 
 <body>
-    <!-- Created BY - Sagar Developer -->
-    <section class="header">
-        <nav>
-            <a href="index.html" class="logo">Xplore
-                <i class="fab fa-staylinked"></i>kill
-            </a>
-            <div class="nav-links" id="navLinks">
-                <!-- Reposnive bar open and close -->
-                <i class="fa fa-times" onclick="hideMenu()"></i>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="course.html">Course</a></li>
-                    <li><a href="blog.html">Blog</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <i class="fa fa-bars" onclick="showMenu()"></i>
-            <!-- Reposnive bar open and close -->
-        </nav>
+  <!-- Header -->
+  <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <div class="brand">
+          <a href="#hero">
+            <h1><span>C</span>itypedia</h1>
+          </a>
+        </div>
+        <div class="nav-list">
+          <div class="hamburger">
+            <div class="bar"></div>
+          </div>
+          <ul>
+            <li><a href="#hero" data-after="Home">Home</a></li>
+            <li><a href="#comparison" data-after="Comparison">Comparison</a></li>
+            <li><a href="#number" data-after="Number">Number</a></li>
+            <li><a href="#efficiency" data-after="Efficiency">Efficiency</a></li>
+            <li><a href="#quiz" data-after="Quiz">Quiz</a></li>
+            <li><a href="#contact" data-after="Contact">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Header -->
+
+
+  <!-- Hero Section  -->
+  <section id="hero">
+    <div class="hero container">
+      <div>
+        <h1>Hello we are Group 21, <span></span></h1>
+        <h1>This website is all about <span></span></h1>
+        <h1>sorting methods<span></span></h1>
+        <a href="#number" type="button" class="cta">Numbers</a>
+      </div>
+    </div>
+  </section>
+  <!-- End Hero Section  -->
+
+  <!-- Background Section -->
+  <section id="background">
+    <div class="background container">
+      <div class="col-right">
+        <h1 class="section-title"><span>B</span>ackground</h1>
+        <h2>Let's have a brief understanding of what sorting methods are.</h2>
+        <p>In the discipline of programming and computer science, sorting methods hold an irreplaceable role contributing as a fundamental algorithm block for arranging data in an inferable and productive way. 
+          The exploration of different sorting methods includes a diverse range of techniques, ranging from simple and intuitive approaches like Bubble Sort to sophisticated and efficient methods such as Merge Sort and Quick Sort. 
+          To reorder an array or list of elements, a sorting algorithm is implemented based on a comparison operator applied to the elements. Sorting means reordering of all the elements either in ascending or in descending order. </p>
+      </div>
+    </div>
+  </section>
+  <!-- End background Section -->
+
+  <!-- application Section -->
+  <section id="application">
+    <div class="application container">
+      <div class="application-top">
+        <h1 class="section-title"><span>A</span>pplication</h1>
+        <p>Sorting methods are essential tools in a wide range of applications across various industries and disciplines. These algorithms are instrumental in organizing and arranging data in a structured manner. The following are some general ways in which sorting methods are commonly used in applications</p>
+      </div>
+      <div class="application-bottom">
+        <div class="application-item">
+          <div class="icon"><img src="./img/unnamed.png" /></div>
+          <h2>Database Management</h2>
+          <p>Sorting algorithms are commonly used in database management systems to sort and index large volumes of data. This ensures quick retrieval of information and faster processing.</p>
+        </div>
+        <div class="application-item">
+          <div class="icon"><img src="./img/unnamed.png" /></div>
+          <h2>E-commerce and Retail</h2>
+          <p>cIn e-commerce platforms, sorting methods are employed to arrange products based on various parameters such as price, popularity, ratings, etc. This enhances user experience by presenting relevant and personalized product information</p>
+        </div>
+        <div class="application-item">
+          <div class="icon"><img src="./img/unnamed.png" /></div>
+          <h2>Search Engines</h2>
+          <p>Search engines utilize sorting algorithms to rank search results based on relevance, user preferences, and other criteria. Sorting ensures that the most relevant content is personalized to users</p>
+        </div>
+        <div class="application-item">
+          <div class="icon"><img src="./img/unnamed.png" /></div>
+          <h2>Finance and Banking</h2>
+          <p>Sorting methods play a vital role in financial institutions for organizing transaction records, customer data, and financial documents. They are used for tasks such as report generation and risk assessment</p>
+        </div>
+        <div class="application-item">
+          <div class="icon"><img src="./img/unnamed.png" /></div>
+          <h2>Logistics and Supply Chain Management</h2>
+          <p>Sorting algorithms are applied in optimizing supply chain operations by arranging inventory, tracking shipments, and determining efficient routes for transportation. This streamlines the logistics processes and minimizes transportation delays</p>
+        </div>
+        <div class="application-item">
+          <div class="icon"><img src="./img/unnamed.png" /></div>
+          <h2>Data Analysis and Research</h2>
+          <p>Researchers and analysts use sorting methods to organize and process large datasets for statistical analysis and pattern identification</p>
+        </div>
+        <div class="application-item">
+          <div class="icon"><img src="./img/unnamed.png" /></div>
+          <h2>Telecommunications and Networking</h2>
+          <p>Sorting algorithms are employed in network routing protocols to help in managing network traffic and ensuring smooth communication between devices</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- End application Section -->
+
+  <!-- Features  Section -->
+  <section id="background">
+    <div class="background container">
+      <div class="col-right">
+        <h1 class="section-title"><span>M</span>ain <span>F</span>aeatures</h1>
+        <h2>The features of different sorting methods.</h2>
+        <p>(a) Internal sorting: Using main memory only during sorting are called internal sorting algorithms. Such an algorithm assumes a high speed random access to all memory. Some common algorithms that use this option are: Bubble Sort, Insertion Sort., and Quick Sort.</p>
+        <p>(b) External sorting: Uses external memory, come into this category when they are sorted. They are slower than internal sorting algorithms. such as the merge sort algorithm. It sorts the appropriate blocks into each RAM, and then combines the sorted blocks.</p>
+        <p>(c) Stable sorting: It keeps the relative order of elements with the same key as they are sorted. On the other hand, if two objects have the same key value, the stable sorting ensures that their original order is preserved in sorted output. </p>
+        <p>(d) Unstable sorting: There are no overhead is required to preserve the order of the same objects, and this sorting method are faster. Unstable sorting is not guaranteed to preserve their relative order in the original list in the sorted output. This sorting algorithms are often used when ordering of similar features is not necessary or can be ignored.</p>
+        <p>(e) In-place sorting & out-of place sorting: It operates directly on the input data structure without the need for additional space relative to the main input. In other words, it transforms the input rather than a separate copy of the data structure. The unlocated algorithm is sometimes referred to as out-of place sorting. </p>
+      </div>
+    </div>
+  </section>
+  <!-- Features  Section -->
+
+
+  <!-- Comparison Section -->
+  <section id="comparison">
+    <div class="comparison container">
+      <div class="comparison-top">
+        <h1 class="section-title"><span>C</span>omparison</h1>
+        <p>This section is about comparing different sorting method</p>
+      </div>
+      <div class="comparison-bottom">
+        <div class="comparison-item">
+          <div class="icon"><img src="./img/comparison.png" /></div>
+          <h2>Internal vs External</h2>
+          <p>Internal processing is used when input data can be prepared once in main memory while external processing is used when input data cannot be prepared at once in main memory.</p>
+        </div>
+        <div class="comparison-item">
+          <div class="icon"><img src="./img/comparison.png" /></div>
+          <h2>Stable vs Unstable</h2>
+          <p>The stable sorting algorithm preserves the relative order of the same objects, while the unstable sorting algorithm does not. In other words, the invariant order maintains the position of two identical objects relative to each other. </p>
+        </div>
+        <div class="comparison-item">
+          <div class="icon"><img src="./img/comparison.png" /></div>
+          <h2>In-place vs Out-of place </h2>
+          <p>In-Place means that your sorting algorithm uses no extra memory except the array for sorting, while out-of-place means that your sorting algorithm uses extra memory. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End comparison Section -->
+
+  <!-- Number Section -->
+  <section id="number">
+    <div class="number container">
+      <div class="number-header">
+        <h1 class="section-title">Sorting <span>Numbers</span></h1>
+      </div>
+      <div class="all-number">
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Internal sorting</h1>
+            <p>For this example, we can use the quick sort method to sort it as internal sorting takes a pivot element, then divides the data set into two sub-arrays, one sub-array larger than the element and the other sub-array smaller than the element The same process is repeated for the sub-arrays until if the structure of the data set as shown below happens. </p>
+          </div>
+          <div class="project-img">
+            <img src="https://www.baeldung.com/wp-content/uploads/sites/4/2021/08/insertion-sort-v1-1.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>External sorting</h1>
+            <p>External algorithms require algorithms whose spatial complexity does not increase with the size of the data set. While the space complexity of the Merge Sort is O(n), we can make changes in O(1). From the example below, It shows a computer with 8GB RAM and high data flow sorting data size of 50 GB using Merge Sort Algorithm. </p>
+          </div>
+          <div class="project-img">
+            <img src="https://www.baeldung.com/wp-content/uploads/sites/4/2021/08/external-sort-2.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Stable and Unstable sorting</h1>
+          <p>We have an array of integers A:  [ 5, 8, 9, 8, 3 ]. We will use 8 in the case and represent the array using color-coded balls, where any two balls with the same integer will have a different color which would help us keep track of equal elements. Stable sorting maintains the order of two identical balls numbered 8s, while an unstable sorting may evolve into a system of two 8s.</p>
+          </div>
+          <div class="project-img">
+            <img src="https://www.baeldung.com/wp-content/uploads/2019/08/Stable-vs-Unstable-1.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>In-place sorting</h1>
+            <p>First, we will assume that we want to invert an array of n numbers. If we think about the problem, we will see that we have an input array and a reversed array as output. In the end, we don’t really need the original design, just the adapted version. We would only need one more variable to store the values is currently working on: It is worth mentioning that no matter the size of the array, the extra space we need will always be O(1) in this case. </p>
+          </div>
+          <div class="project-img">
+            <img src="https://www.baeldung.com/wp-content/uploads/2019/08/Screen-Shot-2019-08-07-at-3.40.33-PM.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Out-of-place sorting</h1>
+          
+            <p>For the out-of place sorting, we can do this more simply, and even more clearly. We can create a new array of the same size and basically copy the values in the corresponding order and then delete the original array: While this will do the job we want, it doesn't work well enough. O(n) has extra space because we have two arrays in use. In addition, creating and removing new systems is usually a slow process.</p>
+          </div>
+          <div class="project-img">
+            <img src="https://www.baeldung.com/wp-content/uploads/2019/08/Screen-Shot-2019-08-07-at-3.40.22-PM.png" alt="img">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Number Section -->
+
+  <!-- Efficiency Section -->
+  <section id="efficiency">
+    <div class="efficiency container">
+      <div class="col-right">
+        <h1 class="section-title"><span>E</span>ffectiveness</h1> 
+        <h3>Internal Sorting Algorithms</h3>
+        <p>The effectiveness of internal sorting algorithms can be evaluated based on these following factors:</p>
+        <ol>
+          <li>Time Complexity: The efficiency of internal sorting algorithms is often measured by their time complexity. Algorithms with lower time complexity, such as O(n log n) for quicksort or merge sort, are considered more effective as they can handle large datasets efficiently.</li>
+          <li>Space Complexity: Internal sorting algorithms are expected to use a minimal amount of extra space. Algorithms that do not require additional space allocation aside from the input array are preferred.</li>
+          <li>Stability: Stability refers to maintaining the relative order of equal elements in the sorted output. Effective internal sorting algorithms should preserve the order of elements with the same value.</li>
+          <li>Adaptability: Some internal sorting algorithms can adapt their behaviour based on the initial order of the input data. Adaptive algorithms can perform better when the data is partially sorted.</li>
+          <li>Ease of Implementation: The ease of understanding and implementing an internal sorting algorithm is also a factor in its effectiveness. Algorithms that are clear and straightforward are often preferred in practice.</li>
+        </ol>
+        <br>
+        <h3>External Sorting Algorithms</h3>
+        <p>The effectiveness of external sorting algorithms is evaluated based on these following factors:</p>
+        <ol>
+          <li>I/O Efficiency: Since external sorting involves frequent read and write operations to disk, the efficiency of I/O operations is crucial. Effective external sorting algorithms minimize the number of disk accesses and optimize data transfer between internal memory and external storage.</li>
+          <li>Time Complexity: The time complexity of external sorting algorithms is influenced by the number of disk accesses and the efficiency of merge operations. Algorithms with lower time complexity, such as O(n log n) for external merge sort, are considered more effective in handling large datasets.</li>
+          <li>Space Complexity: While external sorting algorithms require additional space in external storage, effective algorithms aim to minimize the space overhead and make efficient use of available disk space.</li>
+          <li>Scalability: The effectiveness of external sorting algorithms is often assessed based on their ability to scale to large datasets. Algorithms that can efficiently handle varying data sizes and adapt to different disk configurations are preferred.</li>
+          <li>Fault Tolerance: Since disk operations are prone to errors and failures, effective external sorting algorithms should incorporate mechanisms for error handling, recovery, and fault tolerance to ensure data integrity.</li>
+        </ol>
+        <br>
+        <h3>Stable Sorting Algorithms</h3>
+        <p>The effectiveness of stable sorting algorithms is evaluated based on these following factors:</p>
+        <ol>
+          <li>Preservation of Order: The primary advantage of stable sorting algorithms is their ability to preserve the order of elements with equal keys. This characteristic is useful in scenarios where maintaining the original order of equal elements is important.</li>
+          <li>Applications: Stable sorting is particularly useful in situations where the original order of equivalent elements carries significance, such as sorting a list of people based on their arrival time or sorting records based on multiple keys.</li>
+          <li>Predictability: Stable sorting algorithms provide predictable outcomes, ensuring that the sorting results remain consistent even for identical keys.</li>
+          <li>Merge Operations: Certain sorting algorithms, such as merge sort, can be implemented to be stable. The effectiveness of stable sorting can be evaluated based on the efficiency of merge operations while maintaining stability.</li>
+        </ol>
+        <br>
+        <h3>Unstable sorting algorithms</h3>
+        <p>The effectiveness of unstable sorting algorithms is assessed based on different criteria compared to stable sorting algorithms: </p>
+        <ol>
+          <li>Performance: Unstable sorting algorithms may often be more efficient in terms of performance compared to stable sorting algorithms. The lack of need to maintain the order of equal elements can sometimes lead to faster sorting processes.</li>
+          <li>Space Complexity: Unstable sorting algorithms may require less memory or have better space complexity compared to stable sorting algorithms since they do not need additional steps to maintain the order of elements with the same key. </li>
+          <li>Simplicity: Unstable sorting algorithms can be simpler to implement and understand since they do not need to consider the order preservation of equal elements. </li>
+          <li>Adaptability: Unstable sorting algorithms may be more adaptable in certain scenarios where maintaining equal element order is not necessary or desired. They can be more flexible in handling different types of data. </li>
+        </ol>
+        <br>
+        <h3>In-place sorting algorithms</h3>
+        <p>The effectiveness of in-place sorting algorithms is evaluated based on several criteria: </p>
+        <ol>
+          <li>Space Complexity: In-place sorting algorithms are efficient in terms of space complexity as they do not need additional memory allocation to store a copy of the input data. They use a constant amount of extra space regardless of the input size, making them memory efficient. </li>
+          <li>Time Complexity: The time complexity of in-place sorting algorithms varies depending on the algorithm used. Many in-place sorting algorithms have good time complexity, making them efficient for large datasets. </li>
+          <li>Efficiency: In-place sorting algorithms are preferred for scenarios where memory usage is a concern or when there are memory constraints. They are efficient in terms of memory usage.  </li>
+          <li>Stability: Some in-place sorting algorithms can be implemented to be stable, preserving the order of equal elements in the sorted output. The stability of the algorithm can add to its effectiveness in certain applications.  </li>
+        </ol>
+        <br>
+        <h3>Out-of-place</h3>
+        <p>The effectiveness of out-of-place sorting depends on several factors: </p>
+        <ol>
+          <li>Stability: Out-of-place sorting algorithms are generally stable, meaning they do not change the relative order of equal elements. </li>
+          <li>Space Complexity: Out-of-place algorithms usually have higher space complexity compared to in-place algorithms. If memory usage is a concern, in-place sorting might be more efficient.</li>
+          <li>Time Complexity: The time complexity of out-of-place sorting algorithms can differ from in-place algorithms. In some cases, out-of-place algorithms might perform better due to reduced data movement operations.</li>
+          <li>Clarity and Readability: Out-of-place algorithms can be easier to understand and implement since they do not modify the original data structure.</li>
+        </ol>
+      </div>
+    </div>
+  </section>
+  <!-- End efficiency Section -->
+
+  <!-- Quiz Section -->
+  <section id="quiz">
+    <div class="quiz container">
+      <div class="contact-top">
+        <h1 class="section-title"><span>Q</span>uiz</h1>
+          <p>Let's do a quiz. Test your understanding of Sorting Methods!</p>
+      </div>
+      <div class="quiz-item">
+        <a href="https://cityutestwebsite.github.io/CS1102_G21/quiz.html" class="gtq">Take a quiz</a>
+      </div>
+    </div>
+  </section>
+  <!-- End Quiz Section -->
+
+  <!-- Contact Section -->
+  <section id="contact">
+    <div class="contact container">
+      <div class="contact-top">
+        <h1 class="section-title">Contact <span>info</span></h1>
+          <p>We are a group of students at City University of Hong Kong</p>
+          <p>Reference List:</p>
+          <p>GeeksforGeeks. (2023, March 30). <i>Introduction to sorting techniques data structure and algorithm tutorials.</i> GeeksforGeeks. <br/>https://www.geeksforgeeks.org/introduction-to-sorting-algorithm/</p>
+          <p><i>Sorting algorithm.</i> (n.d.). https://www.programiz.com/dsa/sorting-algorithm</p>
+          <p>Online, S. (2024, January 2). <i>Types of sorting algorithm.</i> Shiksha.com.<br/>https://www.shiksha.com/online-courses/articles/types-of-sorting-algorithm-blogId-148505</p>
+          <p>Parekh, D. (2022, December 13). <i>Sorting algorithms: slowest to fastest.</i> Built In. <br/>https://builtin.com/machine-learning/fastest-sorting-algorithm</p>
+          <p>Moore, K., Pilling, G., Kappel, T., Takvam, K., & Khim, J. (n.d.). <i>Sorting algorithms.</i> <br/>https://brilliant.org/wiki/sorting-algorithms/</p>
+          <p>We produce this website to demonstrate our skills in coding in HTML and CSS. Explaining the knowledge about different sorting methods and sharing the experiences with others.</p>
+      </div>
+      <div class="contact-item">
+          <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
+          <div class="contact-info">
+            <h1>Email</h1>
+            <h2>cityutestapp@gmail.com</h2>
+            <h2></h2>
+          </div>
+          </div>
+        <a href="#" class="cta">Back To Top</a>
+      </div>
+    </div>
+  </section>
+  <!-- End Contact Section -->
+
+  <!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <div class="brand">
+        <h1><span>C</span>itypedia<span></h1>
+      </div>
+      <h2>Your Complete Storting Website</h2>
+      <p></p>
+    </div>
+  </section>
+  <!-- End Footer -->
+  <script src="./app.js"></script>
+</body>
+
+</html>
+
+</html>
+
