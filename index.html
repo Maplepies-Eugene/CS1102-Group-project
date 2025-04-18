@@ -4,17 +4,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
+  <title>Threat and Solutions for Internet Security in E-Banking</title>
 
   <script>
     const questions = [
     {
-        question: "Which is the factor of search engines use ranking algorithms to sort search results?",
+        question: "What is the primary purpose of Multi-Factor Authentication (MFA) in e-banking?",
         answers: [
-            {text: "User preferences only", correct: false},
-            {text: "Ratings", correct: false},
-            {text: "User preferences and relevance", correct: true},
-            {text: "Relevance only", correct: false},
+            {text: "To speed up login processes.", correct: false},
+            {text: "To replace passwords entirely.", correct: false},
+            {text: "To reduce the risk of unauthorized access by requiring multiple verification steps.", correct: true},
+            {text: "To share login credentials securely.", correct: false},
         ]
     },
     {
@@ -50,7 +50,7 @@
             {text: "To minimize time complexity", correct: false},
             {text: "To manage extensive data sets that exceed the capacity of the main memory", correct: true},
             {text: "To maintain stability during the sorting process", correct: false},
-            {text: "To reduce comparisons", correct: false},
+            {text: "To reduce solutionss", correct: false},
         ] 
     }
 ];
@@ -145,6 +145,8 @@ nextButton.addEventListener("click", ()=>{
 
 startQuiz();
 
+
+
 </script>
 
   <style>
@@ -202,15 +204,15 @@ ol {
 	text-align: center;
 }
 .section-title span {
-	color: rgb(20, 217, 220);
+	color: rgb(250, 128, 114);
 }
 
 .gtq {
 	display: inline-block;
 	padding: 10px 30px;
 	color: white;
-	background-color: rgb(20, 217, 220);
-	border: 2px solid rgb(20, 217, 220);
+	background-color: rgb(250, 128, 114);
+	border: 2px solid rgb(250, 128, 114);
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
@@ -224,7 +226,7 @@ ol {
 	padding: 10px 30px;
 	color: white;
 	background-color: transparent;
-	border: 2px solid rgb(20, 217, 220);
+	border: 2px solid rgb(250, 128, 114);
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
@@ -234,7 +236,7 @@ ol {
 }
 .cta:hover {
 	color: white;
-	background-color: rgb(20, 217, 220);
+	background-color: rgb(250, 128, 114);
 }
 .brand h1 {
 	font-size: 3rem;
@@ -242,7 +244,7 @@ ol {
 	color: white;
 }
 .brand h1 span {
-	color: rgb(20, 217, 220);
+	color: rgb(250, 128, 114);
 }
 
 /* Header section */
@@ -314,7 +316,7 @@ ol {
 	letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-	color: rgb(20, 217, 220);
+	color: rgb(250, 128, 114);
 }
 #header .hamburger {
 	height: 60px;
@@ -422,7 +424,7 @@ ol {
 	left: 0;
 	height: 100%;
 	width: 0;
-	background-color: rgb(20, 217, 220);
+	background-color: rgb(250, 128, 114);
 	animation: text_reveal_box 1s ease;
 	animation-delay: 0.5s;
 }
@@ -481,31 +483,31 @@ ol {
 	top: 19px;
 	height: 98%;
 	width: 98%;
-	border: 7px solid rgb(20, 217, 220);
+	border: 7px solid rgb(250, 128, 114);
 	z-index: -1;
 }
 /* End Background */
 
-/* application Section */
-#application .application {
+/* security threats Section */
+#security threats .security threats {
 	flex-direction: column;
-	text-align: center;
+	text-align: left;
 	max-width: 1500px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
-#application .application-top {
+#security threats .security threats-top {
 	max-width: 1200px;
 	margin: 0 auto;
 }
-#application .application-bottom {
+#security threats .security threats-bottom {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	margin-top: 50px;
 }
-#application .application-item {
+#security threats .security threats-item {
 	flex-basis: 80%;
 	display: flex;
 	align-items: flex-start;
@@ -520,7 +522,7 @@ ol {
 	z-index: 1;
 	overflow: hidden;
 }
-#application .application-item::after {
+#security threats .security threats-item::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -531,44 +533,44 @@ ol {
 	opacity: 0.9;
 	z-index: -1;
 }
-#application .application-bottom .icon {
+#security threats .security threats-bottom .icon {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 20px;
 }
-#application .application-item h2 {
+#security threats .security threats-item h2 {
 	font-size: 2rem;
 	color: white;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
-#application .application-item p {
+#security threats .security threats-item p {
 	color: white;
 	text-align: left;
 }
-/* End application Section */
+/* End security threats Section */
 
 
-/* comparison Section */
-#comparison .comparison {
+/* solutions Section */
+#solutions .solutions {
 	flex-direction: column;
 	text-align: center;
 	max-width: 1500px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
-#comparison .comparison-top {
+#solutions .solutions-top {
 	max-width: 500px;
 	margin: 0 auto;
 }
-#comparison .comparison-bottom {
+#solutions .solutions-bottom {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
 	margin-top: 50px;
 }
-#comparison .comparison-item {
+#solutions .solutions-item {
 	flex-basis: 80%;
 	display: flex;
 	align-items: flex-start;
@@ -583,7 +585,7 @@ ol {
 	z-index: 1;
 	overflow: hidden;
 }
-#comparison .comparison-item::after {
+#solutions .solutions-item::after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -594,40 +596,40 @@ ol {
 	opacity: 0.9;
 	z-index: -1;
 }
-#comparison .comparison-bottom .icon {
+#solutions .solutions-bottom .icon {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 20px;
 }
-#comparison .comparison-item h2 {
+#solutions .solutions-item h2 {
 	font-size: 2rem;
 	color: white;
 	margin-bottom: 10px;
 	text-transform: uppercase;
 }
-#comparison .comparison-item p {
+#solutions .solutions-item p {
 	color: white;
 	text-align: left;
 }
-/* End comparison Section */
+/* End solutions Section */
 
-/* Number section */
-#number .number {
+/* Challenges and Effectiveness section */
+#Challenges and Effectiveness .Challenges and Effectiveness {
 	flex-direction: column;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 100px 0;
 }
-#number .number-header h1 {
+#Challenges and Effectiveness .Challenges and Effectiveness-header h1 {
 	margin-bottom: 50px;
 }
-#number .all-number {
+#Challenges and Effectiveness .all-Challenges and Effectiveness {
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
 }
-#number .project-item {
+#Challenges and Effectiveness .project-item {
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -637,7 +639,7 @@ ol {
 	overflow: hidden;
 	border-radius: 10px;
 }
-#number .project-info {
+#Challenges and Effectiveness .project-info {
 	padding: 30px;
 	flex-basis: 50%;
 	height: 100%;
@@ -648,19 +650,19 @@ ol {
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	color: white;
 }
-#number .project-info h1 {
+#Challenges and Effectiveness .project-info h1 {
 	font-size: 4rem;
 	font-weight: 500;
 }
-#number .project-info h2 {
+#Challenges and Effectiveness .project-info h2 {
 	font-size: 1.8rem;
 	font-weight: 500;
 	margin-top: 10px;
 }
-#number .project-info p {
+#Challenges and Effectiveness .project-info p {
 	color: white;
 }
-#number .project-img {
+#Challenges and Effectiveness .project-img {
 	flex-basis: 50%;
 	max-width: 100%;
 	height: auto;
@@ -668,7 +670,7 @@ ol {
 	overflow: hidden;
 	position: relative;
 }
-#number .project-img:after {
+#Challenges and Effectiveness .project-img:after {
 	content: '';
 	position: absolute;
 	left: 0;
@@ -678,65 +680,65 @@ ol {
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	opacity: 0.7;
 }
-#number .project-img img {
+#Challenges and Effectiveness .project-img img {
 	transition: 0.3s ease transform;
 }
-#number .project-item:hover .project-img img {
+#Challenges and Effectiveness .project-item:hover .project-img img {
 	transform: scale(1.1);
 }
-/* End number section */
+/* End Challenges and Effectiveness section */
 
-/* Efficiency Section */
-#efficiency .efficiency {
+/* Evaluating Section */
+#Evaluating .Evaluating {
 	flex-direction: column-reverse;
 	text-align: center;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 100px 20px;
 }
-#efficiency .col-left {
+#Evaluating .col-left {
 	width: 250px;
 	height: 360px;
 }
-#efficiency .col-right {
+#Evaluating .col-right {
 	width: 100%;
 }
-#efficiency .col-right h3 {
+#Evaluating .col-right h3 {
 	font-size: 24px;
 	font-weight: bold;
 	letter-spacing: 0.2rem;
 	margin-top: 30px;
 	margin-bottom: 20px;
 }
-#efficiency .col-right p {
+#Evaluating .col-right p {
 	margin-bottom: 10px;
 }
-#efficiency .col-right ol li {
+#Evaluating .col-right ol li {
 	margin-bottom: 7px;
 }
-#efficiency .col-right .cta {
+#Evaluating .col-right .cta {
 	color: black;
 	margin-bottom: 50px;
 	padding: 10px 20px;
 	font-size: 2rem;
 }
-#efficiency .col-left .efficiency-img {
+#Evaluating .col-left .Evaluating-img {
 	height: 100%;
 	width: 100%;
 	position: relative;
 	border: 10px solid white;
 }
-#efficiency .col-left .efficiency-img::after {
+#Evaluating .col-left .Evaluating-img::after {
 	content: '';
 	position: absolute;
 	left: -33px;
 	top: 19px;
 	height: 98%;
 	width: 98%;
-	border: 7px solid rgb(20, 217, 220);
+	border: 7px solid rgb(250, 128, 114);
 	z-index: -1;
 }
-/* End Efficiency Section */
+/* End Evaluating Section */
 
 /* Quiz Section */
 #quiz .quiz {
@@ -877,7 +879,7 @@ ol {
 }
 @keyframes text_reveal_name {
 	100% {
-		color: rgb(20, 217, 220);
+		color: rgb(250, 128, 114);
 		font-weight: 500;
 	}
 }
@@ -918,7 +920,7 @@ ol {
 		top: 34px;
 		height: 98%;
 		width: 98%;
-		border: 10px solid rgb(20, 217, 220);
+		border: 10px solid rgb(250, 128, 114);
 	}
 	#background .col-right {
 		text-align: left;
@@ -929,65 +931,65 @@ ol {
 	}
 	/* End Background */
 
-	/* application Section */
-	#application .application-bottom .application-item {
+	/* security threats Section */
+	#security threats .security threats-bottom .security threats-item {
 		flex-basis: 45%;
 		margin: 2.5%;
 	}
-	/* End application Section */
+	/* End security threats Section */
 
-	/* comparison Section */
-	#comparison .comparison-bottom .comparison-item {
+	/* solutions Section */
+	#solutions .solutions-bottom .solutions-item {
 		flex-basis: 45%;
 		margin: 2.5%;
 	}
-	/* End comparison Section */
+	/* End solutions Section */
 
 	/* Project */
-	#number .project-item {
+	#Challenges and Effectiveness .project-item {
 		flex-direction: row;
 	}
-	#number .project-item:nth-child(even) {
+	#Challenges and Effectiveness .project-item:nth-child(even) {
 		flex-direction: row-reverse;
 	}
-	#number .project-item {
+	#Challenges and Effectiveness .project-item {
 		height: 400px;
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
 	}
-	#number .all-number .project-info {
+	#Challenges and Effectiveness .all-Challenges and Effectiveness .project-info {
 		height: 100%;
 	}
-	#number .all-number .project-img {
+	#Challenges and Effectiveness .all-Challenges and Effectiveness .project-img {
 		height: 100%;
 	}
 	/* End Project */
 
-	/* Efficiency */
-	#efficiency .efficiency {
+	/* Evaluating */
+	#Evaluating .Evaluating {
 		flex-direction: row;
 	}
-	#efficiency .col-left {
+	#Evaluating .col-left {
 		width: 600px;
 		height: 400px;
 		padding-left: 60px;
 	}
-	#efficiency .efficiency .col-left .efficiency-img::after {
+	#Evaluating .Evaluating .col-left .Evaluating-img::after {
 		left: -45px;
 		top: 34px;
 		height: 98%;
 		width: 98%;
-		border: 10px solid rgb(20, 217, 220);
+		border: 10px solid rgb(250, 128, 114);
 	}
-	#efficiency .col-right {
+	#Evaluating .col-right {
 		text-align: left;
 		padding: 30px;
 	}
-	#efficiency .col-right h1 {
+	#Evaluating .col-right h1 {
 		text-align: left;
 	}
-	/* End Efficiency */
+	/* End Evaluating */
 
 	/* Quiz  */
 	#quiz .quiz {
@@ -1071,12 +1073,12 @@ ol {
 	}
 	/* End header */
 
-	#comparison .comparison-bottom .comparison-item {
+	#solutions .solutions-bottom .solutions-item {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
 	
-	#application .application-bottom .application-item {
+	#security threats .security threats-bottom .security threats-item {
 		flex-basis: 22%;
 		margin: 1.5%;
 	}
@@ -1128,7 +1130,7 @@ ol {
     cursor: no-drop;
 }
 #next-btn{
-    background: rgb(20, 217, 220);
+    background: rgb(250, 128, 114);
     color: #fff;
     font-weight: 500;
     width: 150px;
@@ -1161,7 +1163,7 @@ ol {
       <div class="nav-bar">
         <div class="brand">
           <a href="#hero">
-            <h1><span>C</span>itypedia</h1>
+            <h1><span>E-banking Security</span></h1>
           </a>
         </div>
         <div class="nav-list">
@@ -1170,9 +1172,9 @@ ol {
           </div>
           <ul>
             <li><a href="#hero" data-after="Home">Home</a></li>
-            <li><a href="#comparison" data-after="Comparison">Comparison</a></li>
-            <li><a href="#number" data-after="Number">Number</a></li>
-            <li><a href="#efficiency" data-after="Efficiency">Efficiency</a></li>
+            <li><a href="#solutions" data-after="solutions">solutions</a></li>
+            <li><a href="#Challenges and Effectiveness" data-after="Challenges and Effectiveness">Challenges and Effectiveness</a></li>
+            <li><a href="#Evaluating" data-after="Evaluating">Evaluating</a></li>
             <li><a href="#quiz" data-after="Quiz">Quiz</a></li>
             <li><a href="#contact" data-after="Contact">Contact</a></li>
           </ul>
@@ -1187,10 +1189,10 @@ ol {
   <section id="hero">
     <div class="hero container">
       <div>
-        <h1>Hello we are Group 21, <span></span></h1>
-        <h1>This website is all about <span></span></h1>
-        <h1>sorting methods<span></span></h1>
-        <a href="#number" type="button" class="cta">Numbers</a>
+        <h1>CS1102 - Course Project - 2024/2025 Semester B<span></span></h1>
+        <h2>Jiang Zi Yuan Eugene 57185222<br> team mate 1<br>team mate 2<br>team mate 3<br><span></span></h2>
+        <h1>Threat and Solutions for Internet Security in E-Banking<span></span></h1>
+        <a href="#Challenges and Effectiveness" type="button" class="cta">Challenges and Effectivenesss</a>
       </div>
     </div>
   </section>
@@ -1201,238 +1203,215 @@ ol {
     <div class="background container">
       <div class="col-right">
         <h1 class="section-title"><span>B</span>ackground</h1>
-        <h2>Let's have a brief understanding of what sorting methods are.</h2>
-        <p>In the discipline of programming and computer science, sorting methods hold an irreplaceable role contributing as a fundamental algorithm block for arranging data in an inferable and productive way. 
-          The exploration of different sorting methods includes a diverse range of techniques, ranging from simple and intuitive approaches like Bubble Sort to sophisticated and efficient methods such as Merge Sort and Quick Sort. 
-          To reorder an array or list of elements, a sorting algorithm is implemented based on a comparison operator applied to the elements. Sorting means reordering of all the elements either in ascending or in descending order. </p>
+        <h2>Definition of e-banking</h2>
+        <p>E-banking, or electronic banking, transforms conventional banking by incorporating technology into financial services. This digital advancement enables customers to easily access banking services online via internet banking or mobile security threatss E-banking includes multiple services such as online banking, mobile banking, ATM access, direct deposits, electronic funds transfers, electronic bill payments, and online investing. These services provide customers with convenient and efficient ways to manage their finances, allowing seamless transactions and easy access to financial information anytime and anywhere.
+         </p>
       </div>
     </div>
   </section>
   <!-- End background Section -->
 
-  <!-- application Section -->
-  <section id="application">
-    <div class="application container">
-      <div class="application-top">
-        <h1 class="section-title"><span>A</span>pplication</h1>
-        <p>Sorting methods are essential tools in a wide range of applications across various industries and disciplines. These algorithms are instrumental in organizing and arranging data in a structured manner. The following are some general ways in which sorting methods are commonly used in applications</p>
-      </div>
-      <div class="application-bottom">
-        <div class="application-item">
-          <div class="icon"><img src="./img/unnamed.png" /></div>
-          <h2>Database Management</h2>
-          <p>Sorting algorithms are commonly used in database management systems to sort and index large volumes of data. This ensures quick retrieval of information and faster processing.</p>
-        </div>
-        <div class="application-item">
-          <div class="icon"><img src="./img/unnamed.png" /></div>
-          <h2>E-commerce and Retail</h2>
-          <p>cIn e-commerce platforms, sorting methods are employed to arrange products based on various parameters such as price, popularity, ratings, etc. This enhances user experience by presenting relevant and personalized product information</p>
-        </div>
-        <div class="application-item">
-          <div class="icon"><img src="./img/unnamed.png" /></div>
-          <h2>Search Engines</h2>
-          <p>Search engines utilize sorting algorithms to rank search results based on relevance, user preferences, and other criteria. Sorting ensures that the most relevant content is personalized to users</p>
-        </div>
-        <div class="application-item">
-          <div class="icon"><img src="./img/unnamed.png" /></div>
-          <h2>Finance and Banking</h2>
-          <p>Sorting methods play a vital role in financial institutions for organizing transaction records, customer data, and financial documents. They are used for tasks such as report generation and risk assessment</p>
-        </div>
-        <div class="application-item">
-          <div class="icon"><img src="./img/unnamed.png" /></div>
-          <h2>Logistics and Supply Chain Management</h2>
-          <p>Sorting algorithms are applied in optimizing supply chain operations by arranging inventory, tracking shipments, and determining efficient routes for transportation. This streamlines the logistics processes and minimizes transportation delays</p>
-        </div>
-        <div class="application-item">
-          <div class="icon"><img src="./img/unnamed.png" /></div>
-          <h2>Data Analysis and Research</h2>
-          <p>Researchers and analysts use sorting methods to organize and process large datasets for statistical analysis and pattern identification</p>
-        </div>
-        <div class="application-item">
-          <div class="icon"><img src="./img/unnamed.png" /></div>
-          <h2>Telecommunications and Networking</h2>
-          <p>Sorting algorithms are employed in network routing protocols to help in managing network traffic and ensuring smooth communication between devices</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-  <!-- End application Section -->
-
-  <!-- Features  Section -->
+   <!-- importance  Section -->
   <section id="background">
     <div class="background container">
       <div class="col-right">
-        <h1 class="section-title"><span>M</span>ain <span>F</span>aeatures</h1>
-        <h2>The features of different sorting methods.</h2>
-        <p>(a) Internal sorting: Using main memory only during sorting are called internal sorting algorithms. Such an algorithm assumes a high speed random access to all memory. Some common algorithms that use this option are: Bubble Sort, Insertion Sort., and Quick Sort.</p>
-        <p>(b) External sorting: Uses external memory, come into this category when they are sorted. They are slower than internal sorting algorithms. such as the merge sort algorithm. It sorts the appropriate blocks into each RAM, and then combines the sorted blocks.</p>
-        <p>(c) Stable sorting: It keeps the relative order of elements with the same key as they are sorted. On the other hand, if two objects have the same key value, the stable sorting ensures that their original order is preserved in sorted output. </p>
-        <p>(d) Unstable sorting: There are no overhead is required to preserve the order of the same objects, and this sorting method are faster. Unstable sorting is not guaranteed to preserve their relative order in the original list in the sorted output. This sorting algorithms are often used when ordering of similar features is not necessary or can be ignored.</p>
-        <p>(e) In-place sorting & out-of place sorting: It operates directly on the input data structure without the need for additional space relative to the main input. In other words, it transforms the input rather than a separate copy of the data structure. The unlocated algorithm is sometimes referred to as out-of place sorting. </p>
+        <h1 class="section-title"><span>Importance</span> of internet security</h1>
+        <h2>The primary objective of cybersecurity in the banking sector is to safeguard the integrity, confidentiality, and availability of sensitive financial data. This involves ensuring that transactions are secure, personal information remains private, and banking services are consistently accessible. The security threats of cybersecurity in banking can be highlighted through several key reasons:</h2>
+       
+        <ol>
+          <li>Protecting Customer Data: Banks manage vast amounts of sensitive information, including personal identification and financial details. A loss of data can lead to identity theft and significant financial losses for customers</li>
+          <li>Maintaining Trust: Customers trust banks that can effectively protect their money and personal information. Strong cybersecurity measures are essential for maintaining this trust</li>
+          <li>Regulatory Compliance: Financial institutions are required to follow strict regulations regarding data protection. Non-compliance can result in severe penalties and damage to the institution's reputation</li>
+          <li>Preventing Financial Losses: Cyber-attacks can lead to direct financial losses for both banks and their customers. Implementing effective cybersecurity strategies helps mitigate these risks</li>
+        </ol>
+        
       </div>
     </div>
   </section>
-  <!-- Features  Section -->
+  <!-- importance  Section -->
 
-
-  <!-- Comparison Section -->
-  <section id="comparison">
-    <div class="comparison container">
-      <div class="comparison-top">
-        <h1 class="section-title"><span>C</span>omparison</h1>
-        <p>This section is about comparing different sorting method</p>
-      </div>
-      <div class="comparison-bottom">
-        <div class="comparison-item">
-          <div class="icon"><img src="./img/comparison.png" /></div>
-          <h2>Internal vs External</h2>
-          <p>Internal processing is used when input data can be prepared once in main memory while external processing is used when input data cannot be prepared at once in main memory.</p>
-        </div>
-        <div class="comparison-item">
-          <div class="icon"><img src="./img/comparison.png" /></div>
-          <h2>Stable vs Unstable</h2>
-          <p>The stable sorting algorithm preserves the relative order of the same objects, while the unstable sorting algorithm does not. In other words, the invariant order maintains the position of two identical objects relative to each other. </p>
-        </div>
-        <div class="comparison-item">
-          <div class="icon"><img src="./img/comparison.png" /></div>
-          <h2>In-place vs Out-of place </h2>
-          <p>In-Place means that your sorting algorithm uses no extra memory except the array for sorting, while out-of-place means that your sorting algorithm uses extra memory. </p>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- End comparison Section -->
-
-  <!-- Number Section -->
-  <section id="number">
-    <div class="number container">
-      <div class="number-header">
-        <h1 class="section-title">Sorting <span>Numbers</span></h1>
-      </div>
-      <div class="all-number">
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Internal sorting</h1>
-            <p>For this example, we can use the quick sort method to sort it as internal sorting takes a pivot element, then divides the data set into two sub-arrays, one sub-array larger than the element and the other sub-array smaller than the element The same process is repeated for the sub-arrays until if the structure of the data set as shown below happens. </p>
-          </div>
-          <div class="project-img">
-            <img src="https://www.baeldung.com/wp-content/uploads/sites/4/2021/08/insertion-sort-v1-1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>External sorting</h1>
-            <p>External algorithms require algorithms whose spatial complexity does not increase with the size of the data set. While the space complexity of the Merge Sort is O(n), we can make changes in O(1). From the example below, It shows a computer with 8GB RAM and high data flow sorting data size of 50 GB using Merge Sort Algorithm. </p>
-          </div>
-          <div class="project-img">
-            <img src="https://www.baeldung.com/wp-content/uploads/sites/4/2021/08/external-sort-2.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Stable and Unstable sorting</h1>
-          <p>We have an array of integers A:  [ 5, 8, 9, 8, 3 ]. We will use 8 in the case and represent the array using color-coded balls, where any two balls with the same integer will have a different color which would help us keep track of equal elements. Stable sorting maintains the order of two identical balls numbered 8s, while an unstable sorting may evolve into a system of two 8s.</p>
-          </div>
-          <div class="project-img">
-            <img src="https://www.baeldung.com/wp-content/uploads/2019/08/Stable-vs-Unstable-1.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>In-place sorting</h1>
-            <p>First, we will assume that we want to invert an array of n numbers. If we think about the problem, we will see that we have an input array and a reversed array as output. In the end, we don’t really need the original design, just the adapted version. We would only need one more variable to store the values is currently working on: It is worth mentioning that no matter the size of the array, the extra space we need will always be O(1) in this case. </p>
-          </div>
-          <div class="project-img">
-            <img src="https://www.baeldung.com/wp-content/uploads/2019/08/Screen-Shot-2019-08-07-at-3.40.33-PM.png" alt="img">
-          </div>
-        </div>
-        <div class="project-item">
-          <div class="project-info">
-            <h1>Out-of-place sorting</h1>
+  <!-- security threats Section -->
+  <section id="security threats">
+    <div class="security threats container">
+      <div class="security threats-top">
+        <h1 class="section-title"><span>K</span>ey <span>E</span>-banking <span>S</span>ecurity <span>T</span>hreats</h1>
+        <p>Before learning current cybersecurity measures, common security threats are introduced
           
-            <p>For the out-of place sorting, we can do this more simply, and even more clearly. We can create a new array of the same size and basically copy the values in the corresponding order and then delete the original array: While this will do the job we want, it doesn't work well enough. O(n) has extra space because we have two arrays in use. In addition, creating and removing new systems is usually a slow process.</p>
-          </div>
-          <div class="project-img">
-            <img src="https://www.baeldung.com/wp-content/uploads/2019/08/Screen-Shot-2019-08-07-at-3.40.22-PM.png" alt="img">
-          </div>
+        </p>
+      </div>
+      <div class="security threats-bottom">
+        <div class="security threats-item">
+          <div class="icon"><img src="https://www.malwarebytes.com/wp-content/uploads/sites/2/2024/05/phishing.webp?w=1024" /></div>
+          <h2>Phishing Attacks</h2>
+          <p>a type of attack using social engineering techniques in which cybercriminals impersonate legitimate entities to acquire personal and sensitive information or to infect users' devices with malware</p><br>
+          <h2>Common ways of phishing attacks</h2>
+              <p>(1.)Deceptive Phishing: Phishers impersonate legitimate entities through emails to obtain sensitive information like PII, banking details, and login credentials.</p>
+              <p>(2.)Spear Phishing: Targeted attacks use personal information to craft messages that impersonate trusted contacts, urging specific individuals to disclose sensitive data.</p>
+              <p>(3.)Watering Hole Phishing: Compromise frequently visited websites with malicious code, tricking users into downloading malware when they access these sites.</p>
+              <p>(4.)Vishing: Phishing through phone calls where attackers use fake caller IDs or voice systems to extract personal information from victims.</p>
+              <p>(5.)Smishing: Phishers send fraudulent SMS messages that mimic trusted sources, enticing users to click malicious links or reply with sensitive information.</p><br>
+          
+          <h2>Case study - spear phishing: fake job application</h2>
+            <p>A recruitment officer was tricked into downloading a malicious file disguised as a resume, resulting in a More_eggs infection. This malware exploits a JavaScript backdoor known as More_eggs disguised as fake job applications. It has the ability to steal credentials from various accounts, including online banking, email, and IT administrator accounts</p>
+        </div>
+        <div class="security threats-item">
+          <div class="icon"><img src="https://i.pcmag.com/imagery/articles/02YJstK52KHDsoB72UaleBS-2..v1730140000.jpg" /></div>
+          <h2>Malware</h2>
+          <p>Operates by using deceptive tactics to disrupt the normal functioning of a device. After a cybercriminal gains access through various methods, they exploit this access to initiate further attacks, steal account credentials, gather personal information for sale, sell access to computing resources, or extort money from victims.</p><br>
+
+          <h2>Common ways of Malware Attacks</h2>
+              <p>(a.)Virus: A computer virus functions similarly to a biological virus in human bodies, replicating itself and spreading quickly by attaching to commonly used programs on a computer.</p>
+              <p>(b.)Worm: Worms can also replicate and propagate, but they do so within their own containers and restrict their harmful activities to the specific application they infect.</p>
+              <p>(c.)Botnet: Botnets are programs that infiltrate computers to create a network of compromised devices controlled by a central command server. These networks are often utilized to execute DDoS attacks.</p>
+              <p>(d.)Ransomware: Ransomware locks the victim's computer, demanding payment to restore access. Its primary purpose is typically financial gain.</p><br>
+              
+          <h2>Case study - ransomware: WannaCry, 2017</h2>
+            <p>The WannaCry ransomware attack was a significant security event that affected organizations globally such as FedEx and Honda. The cybercriminals behind the WannaCry attack exploited a vulnerability in the Microsoft Windows operating system, utilizing a hack known as EternalBlue, which was reportedly developed by the United States National Security Agency (NSA). EternalBlue was the primary exploit that enabled WannaCry's rapid propagation, with DoublePulsar serving as the backdoor installed on compromised systems to execute the ransomware. Many of the compromised computers remained encrypted and rendered unusable until the victims either paid the ransom or found a way to decrypt their data.</p>
+        </div>
+        <div class="security threats-item">
+          <div class="icon"><img src="https://miro.medium.com/v2/resize:fit:1400/0*T5NeNPlFaBWBmtQv.jpg" /></div>
+          <h2>Man-in-the-Middle (MitM) Attacks</h2>
+          <p>a cybersecurity threat where an unauthorized individual intercepts communication between two parties without their awareness, positioning themselves in the "middle" of the exchange. These attackers can eavesdrop on and alter the information being shared, enabling them to steal data and distribute malicious links while remaining unnoticed.</p><br>
+          
+          <h2>Common ways of MitM Attacks</h2>
+              <p>(A.)Wi-Fi Eavesdropping: Attackers may create counterfeit Wi-Fi hotspots or infiltrate legitimate networks to capture user traffic.</p>
+              <p>(B.)DNS Spoofing: By manipulating DNS records, which convert domain names into IP addresses, hackers can redirect users to harmful websites without their awareness.</p>
+              <p>(C.)SSL Hijacking: Cybercriminals may intercept and alter SSL certificates, which secure the data exchanged between websites and users. This enables them to capture sensitive information, including login credentials and credit card details.</p><br>
+             
+            <h2>Case study of SSL Hijacking: Equifax Data Breach</h2>
+            <p>In September 2017, Equifax, one of the three largest credit reporting agencies in the United States, revealed that its systems had been compromised, resulting in the exposure of sensitive personal information belonging to 148 million Americans. This resulted in the credit card details of around 209,000 consumers being affected. The roots of the Equifax incident can be traced back to a significant vulnerability discovered in the open-source web application framework Apache Struts. This framework, which was deeply integrated into Equifax's operations, became the initial entry point for the attack.</p>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  <!-- End security threats Section -->
+
+ 
+
+
+  <!-- solutions Section -->
+  <section id="solutions">
+    <div class="solutions container">
+      <div class="solutions-top">
+        <h1 class="section-title"><span>M</span>odern <span>S</span>olutions</h1>
+        <p>for E-Banking Security</p>
+      </div>
+      <div class="solutions-bottom">
+        <div class="solutions-item">
+          <div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6L-hYWbNUj9kjiXdYsFA_ll1-oAmPFX6umA&s" /></div>
+          <h2>Multi-Factor Authentication (MFA)</h2>
+          <p>a security protocol that requires users to provide two or more verification factors to gain access to their accounts. This additional layer of security drastically reduces the likelihood of unauthorized access that can occur with single-factor authentication, which typically relies solely on passwords.</p><br>
+        
+          <h2>Common Forms of MFA</h2>
+              <p>(A.)SMS Codes: A common practice where a one-time code is sent to the user’s registered mobile Challenges and Effectiveness. While convenient, this method is vulnerable to SIM-swapping and phishing attacks.</p>
+              <p>(B.)Biometrics: A rapidly advancing technology that employs unique physical characteristics of users, such as fingerprints, facial recognition, or iris scans. Biometrics, while secure, can present accessibility challenges for some users.</p>
+              <p>(C.)Authenticator Apps: Applications like Google Authenticator or Authy generate time-based one-time passwords (TOTPs) that are only valid for a short period. This method is considered more secure than SMS codes, as it does not rely on external networks.</p><br>
+
+
+
+
+        </div>
+        <div class="solutions-item">
+          <div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6L-hYWbNUj9kjiXdYsFA_ll1-oAmPFX6umA&s" /></div>
+          <h2>Encryption</h2>
+          <p>plays a crucial role in safeguarding customer data within e-banking frameworks. By converting sensitive information into unreadable code, encryption protects data during transmission and storage, ensuring that even if data is intercepted, it remains secure. This is vital in maintaining customer trust and compliance with regulatory standards.</p><br>
+          <h2>Types of Encryption Used in E-Banking</h2>
+              <p>(A.)SSL/TLS (Secure Sockets Layer/Transport Layer Security): These protocols are essential for establishing secure connections between a user’s device and the banking server, ensuring that data transferred during online transactions remains confidential and intact</p>
+              <p>(B.)End-to-End Encryption: This method encrypts data at the sender’s end and only decrypts it at the receiver’s end, preventing any intermediaries from accessing the data. This is especially useful in protecting communications and transactions conducted through banking apps.</p><br>
+          
+        </div>
+        <div class="solutions-item">
+          <div class="icon"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6L-hYWbNUj9kjiXdYsFA_ll1-oAmPFX6umA&s" /></div>
+          <h2>AI-based Fraud Detection </h2>
+          <p>The integration of Artificial Intelligence (AI) and machine learning into e-banking security systems has transformed how financial institutions detect and respond to fraudulent activities. By utilizing large datasets and identifying patterns, these technologies can enhance the accuracy and timeliness of fraud detection.</p>
+          <h2>Techniques for Detecting Fraudulent Activities</h2>
+              <p>(A.)Anomaly Detection: This method involves establishing baseline behavior for individual customers and flagging any deviations from this normal pattern, which may indicate fraudulent activity.</p>
+              <p>(B.)Supervised Learning Models: By training models on historical transaction data, institutions can develop algorithms that recognize patterns associated with fraud, allowing for proactive measures.</p>
+              <p>(C.)Predictive Analytics: Leveraging large volumes of transaction data, banks can predict and preemptively block fraudulent transactions, thereby minimizing losses.</p><br>
         </div>
       </div>
     </div>
   </section>
-  <!-- End Number Section -->
+  <!-- End solutions Section -->
 
-  <!-- Efficiency Section -->
-  <section id="efficiency">
-    <div class="efficiency container">
-      <div class="col-right">
-        <h1 class="section-title"><span>E</span>ffectiveness</h1> 
-        <h3>Internal Sorting Algorithms</h3>
-        <p>The effectiveness of internal sorting algorithms can be evaluated based on these following factors:</p>
-        <ol>
-          <li>Time Complexity: The efficiency of internal sorting algorithms is often measured by their time complexity. Algorithms with lower time complexity, such as O(n log n) for quicksort or merge sort, are considered more effective as they can handle large datasets efficiently.</li>
-          <li>Space Complexity: Internal sorting algorithms are expected to use a minimal amount of extra space. Algorithms that do not require additional space allocation aside from the input array are preferred.</li>
-          <li>Stability: Stability refers to maintaining the relative order of equal elements in the sorted output. Effective internal sorting algorithms should preserve the order of elements with the same value.</li>
-          <li>Adaptability: Some internal sorting algorithms can adapt their behaviour based on the initial order of the input data. Adaptive algorithms can perform better when the data is partially sorted.</li>
-          <li>Ease of Implementation: The ease of understanding and implementing an internal sorting algorithm is also a factor in its effectiveness. Algorithms that are clear and straightforward are often preferred in practice.</li>
-        </ol>
-        <br>
-        <h3>External Sorting Algorithms</h3>
-        <p>The effectiveness of external sorting algorithms is evaluated based on these following factors:</p>
-        <ol>
-          <li>I/O Efficiency: Since external sorting involves frequent read and write operations to disk, the efficiency of I/O operations is crucial. Effective external sorting algorithms minimize the number of disk accesses and optimize data transfer between internal memory and external storage.</li>
-          <li>Time Complexity: The time complexity of external sorting algorithms is influenced by the number of disk accesses and the efficiency of merge operations. Algorithms with lower time complexity, such as O(n log n) for external merge sort, are considered more effective in handling large datasets.</li>
-          <li>Space Complexity: While external sorting algorithms require additional space in external storage, effective algorithms aim to minimize the space overhead and make efficient use of available disk space.</li>
-          <li>Scalability: The effectiveness of external sorting algorithms is often assessed based on their ability to scale to large datasets. Algorithms that can efficiently handle varying data sizes and adapt to different disk configurations are preferred.</li>
-          <li>Fault Tolerance: Since disk operations are prone to errors and failures, effective external sorting algorithms should incorporate mechanisms for error handling, recovery, and fault tolerance to ensure data integrity.</li>
-        </ol>
-        <br>
-        <h3>Stable Sorting Algorithms</h3>
-        <p>The effectiveness of stable sorting algorithms is evaluated based on these following factors:</p>
-        <ol>
-          <li>Preservation of Order: The primary advantage of stable sorting algorithms is their ability to preserve the order of elements with equal keys. This characteristic is useful in scenarios where maintaining the original order of equal elements is important.</li>
-          <li>Applications: Stable sorting is particularly useful in situations where the original order of equivalent elements carries significance, such as sorting a list of people based on their arrival time or sorting records based on multiple keys.</li>
-          <li>Predictability: Stable sorting algorithms provide predictable outcomes, ensuring that the sorting results remain consistent even for identical keys.</li>
-          <li>Merge Operations: Certain sorting algorithms, such as merge sort, can be implemented to be stable. The effectiveness of stable sorting can be evaluated based on the efficiency of merge operations while maintaining stability.</li>
-        </ol>
-        <br>
-        <h3>Unstable sorting algorithms</h3>
-        <p>The effectiveness of unstable sorting algorithms is assessed based on different criteria compared to stable sorting algorithms: </p>
-        <ol>
-          <li>Performance: Unstable sorting algorithms may often be more efficient in terms of performance compared to stable sorting algorithms. The lack of need to maintain the order of equal elements can sometimes lead to faster sorting processes.</li>
-          <li>Space Complexity: Unstable sorting algorithms may require less memory or have better space complexity compared to stable sorting algorithms since they do not need additional steps to maintain the order of elements with the same key. </li>
-          <li>Simplicity: Unstable sorting algorithms can be simpler to implement and understand since they do not need to consider the order preservation of equal elements. </li>
-          <li>Adaptability: Unstable sorting algorithms may be more adaptable in certain scenarios where maintaining equal element order is not necessary or desired. They can be more flexible in handling different types of data. </li>
-        </ol>
-        <br>
-        <h3>In-place sorting algorithms</h3>
-        <p>The effectiveness of in-place sorting algorithms is evaluated based on several criteria: </p>
-        <ol>
-          <li>Space Complexity: In-place sorting algorithms are efficient in terms of space complexity as they do not need additional memory allocation to store a copy of the input data. They use a constant amount of extra space regardless of the input size, making them memory efficient. </li>
-          <li>Time Complexity: The time complexity of in-place sorting algorithms varies depending on the algorithm used. Many in-place sorting algorithms have good time complexity, making them efficient for large datasets. </li>
-          <li>Efficiency: In-place sorting algorithms are preferred for scenarios where memory usage is a concern or when there are memory constraints. They are efficient in terms of memory usage.  </li>
-          <li>Stability: Some in-place sorting algorithms can be implemented to be stable, preserving the order of equal elements in the sorted output. The stability of the algorithm can add to its effectiveness in certain applications.  </li>
-        </ol>
-        <br>
-        <h3>Out-of-place</h3>
-        <p>The effectiveness of out-of-place sorting depends on several factors: </p>
-        <ol>
-          <li>Stability: Out-of-place sorting algorithms are generally stable, meaning they do not change the relative order of equal elements. </li>
-          <li>Space Complexity: Out-of-place algorithms usually have higher space complexity compared to in-place algorithms. If memory usage is a concern, in-place sorting might be more efficient.</li>
-          <li>Time Complexity: The time complexity of out-of-place sorting algorithms can differ from in-place algorithms. In some cases, out-of-place algorithms might perform better due to reduced data movement operations.</li>
-          <li>Clarity and Readability: Out-of-place algorithms can be easier to understand and implement since they do not modify the original data structure.</li>
-        </ol>
+  <!-- Challenges and Effectiveness Section -->
+  <section id="Challenges and Effectiveness">
+    <div class="Challenges and Effectiveness container">
+      <div class="Challenges and Effectiveness-header">
+        <h1 class="section-title">Challenges and<span>Effectiveness</span></h1>
+      </div>
+      <div class="all-Challenges and Effectiveness">
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Multi-Factor Authentication (MFA)</h1>
+            <p>Challenges include user resistance to adopting additional security steps, the complexity of implementation, and the emergence of sophisticated phishing techniques that can target the second authentication factor. Additionally, integrating MFA into existing systems can require significant effort and resources, posing challenges for financial institutions.</p>
+          </div>
+          <div class="project-img">
+            <img src="https://www.monash.edu/__data/assets/image/0019/1509310/MFA-Intro-Graphic.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Encryption</h1>
+            <p>Despite its critical importance, encryption has its limitations. For instance, high levels of encryption can result in performance lags, particularly in environments with limited computing resources. Additionally, reliance on encryption does not eliminate the risk of data breaches caused by social engineering or compromised access credentials. Ensuring that encryption measures are up-to-date with evolving standards presents another challenge for financial institutions striving to protect customer data effectively.</p>
+          </div>
+          <div class="project-img">
+            <img src="https://www.proofpoint.com/sites/default/files/what-is-encryption.png" alt="img">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Successful AI Implementations</h1>
+          <p>HSBC: HSBC has implemented AI algorithms that analyze customer behavior in real time, resulting in a substantial reduction in fraudulent transactions and improved customer satisfaction.</p>
+          <p>PayPal: By utilizing machine learning to enhance their fraud detection systems, PayPal has seen a significant decrease in false positive rates, allowing legitimate transactions to proceed without unnecessary delays, thus improving overall user experience.</p>
+
+          </div>
+          <div class="project-img">
+            <img src="https://www.pentasecurity.com/wp-content/uploads/2021/05/FDS-image.png" alt="img">
+          </div>
+        </div>
+        
       </div>
     </div>
   </section>
-  <!-- End efficiency Section -->
+  <!-- End Challenges and Effectiveness Section -->
+
+  <!-- Evaluating Section -->
+  <section id="Evaluating">
+    <div class="Evaluating container">
+      <div class="col-right">
+        <h1 class="section-title"><span>E</span>valuating Effectiveness and Limitations of Security Measures</h1> 
+        <h3>Strengths and Weaknesses of Current Security Solutions</h3>
+        <h2>1. Comparative Analysis of Effectiveness</h2>
+        <p>Current security solutions, including MFA, encryption, and AI-based fraud detection, demonstrate varying levels of effectiveness. For instance, while encryption reliably protects data integrity, it does not prevent phishing attacks. Conversely, MFA effectively mitigates unauthorized access but can be circumvented through social engineering tactics. A comprehensive understanding of these strengths and weaknesses is crucial for financial institutions to develop robust security frameworks.</p>
+       
+        <br>
+        <h2>2. Gaps in Existing Security Practices</h2>
+        <p>A significant gap in current security practices is the lack of user education on cybersecurity risks and best practices. Many customers remain unaware of common threats such as phishing, leading to vulnerabilities in security systems. Moreover, financial institutions often lack comprehensive incident response plans, which can delay actions and exacerbate breaches when they occur.</p>
+        
+        <br>
+        <h3>Suggestions for Improvement</h3>
+        <h2>1. Recommendations for Financial Institutions:</h2>
+        <p> Financial institutions should invest in ongoing training programs for staff and customers to enhance cybersecurity awareness. Additionally, they should adopt a layered security approach that incorporates MFA, encryption, and real-time AI monitoring to provide a comprehensive defense against evolving threats.</p>
+        <h2>2. Importance of Continuous Risk Assessment and Improvement:</h2>
+        <p>Given the rapidly changing landscape of cyber threats, continuous risk assessment is essential. Financial institutions must regularly evaluate and update their security measures in response to new vulnerabilities and attack vectors. This proactive approach will help ensure that their security systems remain resilient and effective in protecting customer data.</p>
+          
+        
+        <br>
+        
+      </div>
+    </div>
+  </section>
+  <!-- End Evaluating Section -->
 
   <!-- Quiz Section -->
   <section id="quiz">
     <div class="quiz container">
       <div class="contact-top">
         <h1 class="section-title"><span>Q</span>uiz</h1>
-          <p>Let's do a quiz. Test your understanding of Sorting Methods!</p>
+          <p>Come test your understanding on E-Banking internet security!</p>
       </div>
       <div class="quiz-item">
         <a href="https://cityutestwebsite.github.io/CS1102_G21/quiz.html" class="gtq">Take a quiz</a>
@@ -1440,6 +1419,25 @@ ol {
     </div>
   </section>
   <!-- End Quiz Section -->
+
+<!-- Comment Section -->
+  <p>Do you have any comments for us?</p>
+<input type="text" id="textinput" />
+<button id="button_add">Add</button>
+
+<script>
+  document.getElementById('button_add').addEventListener('click', function() {
+    addComment();
+    alert("Received!"); // Pop-up after adding the comment
+  });
+
+  function addComment() {
+    const comment = document.getElementById('textinput').value;
+    console.log("Comment added:", comment); // Optional: Log the comment
+    // Add your logic here (e.g., save to a database, display on the page)
+  }
+</script>
+<!-- End Comment Section -->
 
   <!-- Contact Section -->
   <section id="contact">
@@ -1459,7 +1457,7 @@ ol {
           <div class="icon"><img src="https://img.icons8.com/bubbles/100/000000/new-post.png" /></div>
           <div class="contact-info">
             <h1>Email</h1>
-            <h2>cityutestapp@gmail.com</h2>
+            <h2>ezyjiang2-c@my.cityu.edu.hk</h2>
             <h2></h2>
           </div>
           </div>
@@ -1473,17 +1471,15 @@ ol {
   <section id="footer">
     <div class="footer container">
       <div class="brand">
-        <h1><span>C</span>itypedia<span></h1>
+        <h1><span>E-banking Security</span><span></h1>
       </div>
-      <h2>Your Complete Storting Website</h2>
+      <h2>Your Complete information on E-Banking Internet Security</h2>
       <p></p>
     </div>
   </section>
   <!-- End Footer -->
   <script src="./app.js"></script>
 </body>
-
-</html>
 
 </html>
 
