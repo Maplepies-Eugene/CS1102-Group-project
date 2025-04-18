@@ -8,6 +8,28 @@
 
 
 
+ <script>
+ 
+ function gohome()
+ {
+ window.history.back();
+ }
+ 
+ nextButton.addEventListener("click", ()=>{
+     if(currentQuestionIndex < questions.length){
+         handleNextButton();
+     }else{
+         gohome()
+     }
+ })
+ 
+ 
+ startQuiz();
+ 
+ 
+ 
+ </script>
+ 
 
 
 </head>
