@@ -52,15 +52,15 @@ ol {
 	text-align: center;
 }
 .section-title span {
-	color: rgb(20, 217, 220);
+	color: rgb(250, 128, 114);
 }
 
 .gtq {
 	display: inline-block;
 	padding: 10px 30px;
 	color: white;
-	background-color: rgb(20, 217, 220);
-	border: 2px solid rgb(20, 217, 220);
+	background-color: rgb(250, 128, 114);
+	border: 2px solid rgb(250, 128, 114);
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
@@ -74,7 +74,7 @@ ol {
 	padding: 10px 30px;
 	color: white;
 	background-color: transparent;
-	border: 2px solid rgb(20, 217, 220);
+	border: 2px solid rgb(250, 128, 114);
 	font-size: 2rem;
 	text-transform: uppercase;
 	letter-spacing: 0.1rem;
@@ -84,7 +84,7 @@ ol {
 }
 .cta:hover {
 	color: white;
-	background-color: rgb(20, 217, 220);
+	background-color: rgb(250, 128, 114);
 }
 .brand h1 {
 	font-size: 3rem;
@@ -92,7 +92,7 @@ ol {
 	color: white;
 }
 .brand h1 span {
-	color: rgb(20, 217, 220);
+	color: rgb(250, 128, 114);
 }
 
 /* Header section */
@@ -164,7 +164,7 @@ ol {
 	letter-spacing: initial;
 }
 #header .nav-list ul li:hover a {
-	color: rgb(20, 217, 220);
+	color: rgb(250, 128, 114);
 }
 #header .hamburger {
 	height: 60px;
@@ -272,7 +272,7 @@ ol {
 	left: 0;
 	height: 100%;
 	width: 0;
-	background-color: rgb(20, 217, 220);
+	background-color: rgb(250, 128, 114);
 	animation: text_reveal_box 1s ease;
 	animation-delay: 0.5s;
 }
@@ -331,7 +331,7 @@ ol {
 	top: 19px;
 	height: 98%;
 	width: 98%;
-	border: 7px solid rgb(20, 217, 220);
+	border: 7px solid rgb(250, 128, 114);
 	z-index: -1;
 }
 /* End Background */
@@ -583,7 +583,7 @@ ol {
 	top: 19px;
 	height: 98%;
 	width: 98%;
-	border: 7px solid rgb(20, 217, 220);
+	border: 7px solid rgb(250, 128, 114);
 	z-index: -1;
 }
 /* End Efficiency Section */
@@ -727,7 +727,7 @@ ol {
 }
 @keyframes text_reveal_name {
 	100% {
-		color: rgb(20, 217, 220);
+		color: rgb(250, 128, 114);
 		font-weight: 500;
 	}
 }
@@ -768,7 +768,7 @@ ol {
 		top: 34px;
 		height: 98%;
 		width: 98%;
-		border: 10px solid rgb(20, 217, 220);
+		border: 10px solid rgb(250, 128, 114);
 	}
 	#background .col-right {
 		text-align: left;
@@ -828,7 +828,7 @@ ol {
 		top: 34px;
 		height: 98%;
 		width: 98%;
-		border: 10px solid rgb(20, 217, 220);
+		border: 10px solid rgb(250, 128, 114);
 	}
 	#efficiency .col-right {
 		text-align: left;
@@ -978,7 +978,7 @@ ol {
     cursor: no-drop;
 }
 #next-btn{
-    background: rgb(20, 217, 220);
+    background: rgb(250, 128, 114);
     color: #fff;
     font-weight: 500;
     width: 150px;
