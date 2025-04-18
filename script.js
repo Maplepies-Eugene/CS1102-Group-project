@@ -2,46 +2,46 @@ const questions = [
     {
         question: "What is the primary purpose of Multi-Factor Authentication (MFA) in e-banking?",
         answers: [
-            {text: "User preferences only", correct: false},
-            {text: "Ratings", correct: false},
-            {text: "User preferences and relevance", correct: true},
-            {text: "Relevance only", correct: false},
+            {text: "To speed up login processes.", correct: false},
+            {text: "To replace passwords entirely.", correct: false},
+            {text: "To reduce the risk of unauthorized access by requiring multiple verification steps.", correct: true},
+            {text: "To share login credentials securely.", correct: false},
         ]
     },
     {
-        question: "What is the purpose of researchers and analysts use sorting methods to organize and process large datasets?",
+        question: "Which of the following is an example of a phishing attack?",
         answers: [
-            {text: "Generate reports", correct: false},
-            {text: "Tracking of orders for shipment", correct: false},
-            {text: "Determine the most effective path", correct: false},
-            {text: "Perform pattern identification and statistical analysis", correct: true},
+            {text: "A bank employee resetting your password.", correct: false},
+            {text: "A software update notification from your operating system.", correct: false},
+            {text: "A phone call from a known friend.", correct: false},
+            {text: "An email pretending to be your bank asking for your login details.", correct: true},
         ] 
     },
     {
-        question: "Which storage device is used in external sorting?",
+        question: "What does SSL/TLS encryption protect in e-banking?",
         answers: [
-            {text: "RAM only", correct: false},
-            {text: "Hard Disk only", correct: false},
-            {text: "Both Hard Disk and RAM", correct: true},
-            {text: "Cache memory", correct: false},
+            {text: "Only the bank’s physical servers.", correct: false},
+            {text: "The user’s mobile device hardware.", correct: false},
+            {text: "Data transmitted between the user and the bank’s website.", correct: true},
+            {text: "Paper bank statements.", correct: false},
         ] 
     },
     {
-        question: "What is out-of-place sorting?",
+        question: "Which malware type locks a victim’s computer and demands payment to restore access?",
         answers: [
-            {text: "The sorting algorithm uses secondary memory for sorting", correct: false},
-            {text: "The sorting algorithm uses the main memory for sorting", correct: false},
-            {text: "The sorting algorithm uses no extra memory except the array for sorting", correct: false},
-            {text: "The sorting algorithm uses extra memory for sorting", correct: true},
+            {text: "Virus", correct: false},
+            {text: "Worm", correct: false},
+            {text: "Botnet", correct: false},
+            {text: "Ransomware", correct: true},
         ] 
     },
     {
-        question: "What is the purpose of using external algorithms in sorting?",
+        question: "Why is cybersecurity critical for e-banking?",
         answers: [
-            {text: "To minimize time complexity", correct: false},
-            {text: "To manage extensive data sets that exceed the capacity of the main memory", correct: true},
-            {text: "To maintain stability during the sorting process", correct: false},
-            {text: "To reduce comparisons", correct: false},
+            {text: "To increase transaction fees.", correct: false},
+            {text: "To protect customer data, maintain trust, and comply with regulations.", correct: true},
+            {text: "To slow down online transactions.", correct: false},
+            {text: "To reduce the number of bank branches.", correct: false},
         ] 
     }
 ];
